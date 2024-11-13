@@ -1,0 +1,1 @@
+print("Terminaalin kautta cd python313 ja mkdir Harkka_koodit. Sinne cd ja new item (ni) harkka.py :)")

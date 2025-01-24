@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 1px;
+}
+
+body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+div, section, span, ul, li, a, header {
+    box-sizing: border-box;
+}
+
+section {
+    width: 80%;
+    height: 100vh;
+}
+.league-script-regular {
+    font-family: "League Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* css reset */
+
+/* html {
+    scroll-padding-top: 45px;
+} */
+/* #container { */
+    /* display: flex; */
+    /* align-items: center; */
+    /* width: 80%; */
+    /* margin: 1px; */
+    /* padding: 10px; */
+    /* justify-items: center; */
+/* } */
+
+#koti h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
+    transform: translate(-50%, -50%);
+    color: #edeae5;
+    font-size: 36px;
+}
+
+#koti {
+    /* margin-top: 60px; Rajataan header viemä osuus pois */
+    width: 100%;
+    /* height: calc(100vh - 60px); */
+    height: 100vh;
+    /* overflow-y: auto; */
+    background-color: #edeae5;
+    background-image: url(imgs/maalaismaisema.jpg);
+    background-size: 100% 100%;
+    
+    background-repeat: no-repeat;
+}
+
+#koti img {
+    width: 100%;
+    /* height: 100%;  */
+    background-size: cover;
+}
+
+#koti header {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    bottom: 0;
+    padding: 12px 20px;
+    /* margin: 12px 12px; */
+    background-color: #026670;
+    /* position: fixed; */
+    /* top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000; */
+
+    position: absolute;
+    transform: translateY(-10px);
+    bottom: -30;
+    left: 12.5%;
+
+}
+
+#nav li {
+    display: inline-block;
+    margin: 5px;
+
+}
+
+#nav li a {
+    color: #edeae5;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+#nav li a:href {
+    margin-top: 60px;
+}
+
+#nav li a:hover{
+    text-decoration: underline;
+}
+
+#yhdistys {
+    width: 100%;
+    height: 100vh;
+    background-color: #fef9c7;
+    
+}
+
+#yhdistys h2 {
+    background-color: #026670;
+    color: #edeae5;
+    padding: 5px;
+}
+
+#yhdistys div {
+    margin: 12px;
+}
+
+#palvelut {
+    width: 100%;
+    height: 100vh;
+    background-color: #fce181;
+}
+
+#palvelut h2 {
+    background-color: #026670;
+    color: #edeae5;
+    padding: 5px;
+}
+
+.card-container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+}
+
+.card-container img {
+    height: 150px;
+}
+
+#palvelut div {
+    margin: 12px;
+}
+
+#tapahtumat {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    background-color: #fef9c7;
+}
+
+#tapahtumat div {
+    margin: 12px;
+}
+
+/* Kalenteri alkaa */
+
+/* https://elfsight.com/blog/how-to-make-a-simple-html-calendar/ */
+/* Calendar container */
+.calendar {
+    width: 450px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #edeae5;
+}
+
+/* Calendar header styling */
+.calendar-header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Days of the week styling */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #007bff;
+    color: white;
+}
+
+.calendar-days div {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Date cells styling */
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-dates div {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Highlight today */
+.today {
+    background-color: #ffdd57;
+    font-weight: bold;
+}
+
+/* Kalenteri päättyy */
+
+#tilat {
+    background-color: #fce181;
+    width: 100%;
+
+}
+
+#liity {
+    background-color: #fef9c7;
+    width: 100%;
+}
+
+#svensk {
+    background-color: #fce181;
+    width: 100%;
+}

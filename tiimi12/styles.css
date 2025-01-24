@@ -11,12 +11,12 @@ body {
     height: 100vh;
 }
 
-div, section, span, ul, li, a, header {
+/* div, section, span, ul, li, a, header {
     box-sizing: border-box;
-}
+} */
 
 section {
-    width: 80%;
+    width: 100%;
     height: 100vh;
 }
 .league-script-regular {
@@ -24,6 +24,7 @@ section {
     font-weight: 400;
     font-style: normal;
 }
+
 /* css reset */
 
 /* html {
@@ -70,11 +71,11 @@ section {
 #koti header {
     width: 75%;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    /* justify-content: space-between;
+    align-content: space-between; */
     bottom: 0;
-    padding: 12px 20px;
-    /* margin: 12px 12px; */
+    padding: 12px;
+    margin: 12px;
     background-color: #026670;
     /* position: fixed; */
     /* top: 0;
@@ -83,8 +84,8 @@ section {
     z-index: 1000; */
 
     position: absolute;
-    transform: translateY(-10px);
-    bottom: -30;
+    /* transform: translateY(-10px); */
+    /* bottom: -30; */
     left: 12.5%;
 
 }
@@ -143,10 +144,10 @@ section {
     padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 18px;
+    /* gap: 6px; */
     min-width: 0;
     min-height: 0;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .card-container img {
@@ -158,8 +159,6 @@ section {
 }
 
 #tapahtumat {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     height: 100vh;
     background-color: #fef9c7;

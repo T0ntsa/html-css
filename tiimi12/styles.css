@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 1px;
+    padding: 0;
 }
 
 body {
@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
+    background-color: #edeae5;
 }
 
 /* div, section, span, ul, li, a, header {
@@ -16,7 +17,7 @@ body {
 } */
 
 section {
-    width: 100%;
+    width: 96%;
     height: 100vh;
 }
 .league-script-regular {
@@ -26,18 +27,6 @@ section {
 }
 
 /* css reset */
-
-/* html {
-    scroll-padding-top: 45px;
-} */
-/* #container { */
-    /* display: flex; */
-    /* align-items: center; */
-    /* width: 80%; */
-    /* margin: 1px; */
-    /* padding: 10px; */
-    /* justify-items: center; */
-/* } */
 
 #koti h1 {
     position: absolute;
@@ -50,44 +39,28 @@ section {
 }
 
 #koti {
-    /* margin-top: 60px; Rajataan header viemä osuus pois */
     width: 100%;
-    /* height: calc(100vh - 60px); */
     height: 100vh;
-    /* overflow-y: auto; */
     background-color: #edeae5;
     background-image: url(imgs/maalaismaisema.jpg);
     background-size: 100% 100%;
-    
     background-repeat: no-repeat;
 }
 
 #koti img {
     width: 100%;
-    /* height: 100%;  */
     background-size: cover;
 }
 
 #koti header {
     width: 75%;
     display: flex;
-    /* justify-content: space-between;
-    align-content: space-between; */
     bottom: 0;
     padding: 12px;
     margin: 12px;
     background-color: #026670;
-    /* position: fixed; */
-    /* top: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 1000; */
-
     position: absolute;
-    /* transform: translateY(-10px); */
-    /* bottom: -30; */
-    left: 12.5%;
-
+    left: 10%;
 }
 
 #nav li {
@@ -115,29 +88,22 @@ section {
     width: 100%;
     height: 100vh;
     background-color: #fef9c7;
-    
 }
 
-#yhdistys h2 {
+h2 {
     background-color: #026670;
     color: #edeae5;
     padding: 5px;
 }
 
 #yhdistys div {
-    margin: 12px;
+    margin: 15px;
 }
 
 #palvelut {
     width: 100%;
     height: 100vh;
     background-color: #fce181;
-}
-
-#palvelut h2 {
-    background-color: #026670;
-    color: #edeae5;
-    padding: 5px;
 }
 
 .card-container {
@@ -147,15 +113,18 @@ section {
     /* gap: 6px; */
     min-width: 0;
     min-height: 0;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .card-container img {
     height: 150px;
 }
 
+.card {
+    margin: 5px;
+}
 #palvelut div {
-    margin: 12px;
+    margin: 15px;
 }
 
 #tapahtumat {
@@ -165,11 +134,10 @@ section {
 }
 
 #tapahtumat div {
-    margin: 12px;
+    margin: 15px;
 }
 
 /* Kalenteri alkaa */
-
 /* https://elfsight.com/blog/how-to-make-a-simple-html-calendar/ */
 /* Calendar container */
 .calendar {
@@ -177,6 +145,7 @@ section {
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #edeae5;
+    margin-left: 15px;
 }
 
 /* Calendar header styling */
@@ -184,7 +153,7 @@ section {
     text-align: center;
     background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -220,13 +189,11 @@ section {
     background-color: #ffdd57;
     font-weight: bold;
 }
-
 /* Kalenteri päättyy */
 
 #tilat {
     background-color: #fce181;
     width: 100%;
-
 }
 
 #liity {
@@ -234,7 +201,24 @@ section {
     width: 100%;
 }
 
-#svensk {
+#liity .card-container {
+    margin-left: 15px;
+}
+
+#matkailija {
     background-color: #fce181;
     width: 100%;
+}
+
+#matkailija .card-container {
+    margin-left: 15px;
+}
+
+#svensk {
+    background-color: #fef9c7;
+    width: 100%;
+}
+
+#svensk .card-container {
+    margin-left: 15px;
 }

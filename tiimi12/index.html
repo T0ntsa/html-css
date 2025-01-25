@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=League+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="container">
@@ -23,18 +23,16 @@
                     <li><a href="#palvelut">Palvelut</a></li>
                     <li><a href="#tapahtumat">Tapahtumat</a></li>
                     <li><a href="#kalenteri">Vuokrattavat tilat</a></li>
-                    <li><a href="#">Liity jäseneksi</a></li>
-                    <li><a href="#">Matkailijat</a></li>
-                    <li><a href="#">Svensk</a></li>
+                    <li><a href="#liity">Liity jäseneksi</a></li>
+                    <li><a href="#matkailija">Matkailijat</a></li>
+                    <li><a href="#svensk">Svensk</a></li>
                 </ul>
             </header>
         </section>
     </section>
 
-    <section id="yhdistys">
-        
+    <section id="yhdistys">    
         <h2>Vitsiälän kyläyhdistys</h2><br>
-
         <div class="content">
             <p>
             Pieni kyläyhteisö maalaismasemissa. Yhdistys tarjoaa tietoa sekä toimintaa asukkaille, mökkiläisille ja matkailijoille.
@@ -49,7 +47,6 @@
     
     <section id="palvelut">
         <h2>Palvelut</h2>
-        
         <section class="card-container">
             <div class="card">
                 <img src="imgs/tanssilava.jpg">
@@ -74,26 +71,34 @@
 
     <section id="tapahtumat">
         <h2>Tapahtumat</h2>
-        
         <section class="card-container">
             <div class="card">
-                <img src="#"> Lorem ipsum dolor sitconsectetur.
+                <img src="#">
+                <p>
+                    Lorem ipsum dolor sitconsectetur.
+                </p>
             </div>
             <div class="card">
-                <img src="#"> Lorem ipsum dolor sitconsectetur.
+                <img src="#">
+                <p>
+                    Lorem ipsum dolor sitconsectetur.
+                </p>
             </div>
             <div class="card">
-                <img src="#">Lorem ipsum dolor sitconsectetur.
+                <img src="#">
+                <p>
+                    Lorem ipsum dolor sitconsectetur.
+                </p>
             </div>
         </section>
     </section>
 
     <section id="tilat">
         <h2>Vuokrattavat tilat</h2><br>
-        
         <section class="card-container">
         <div class="card">
             <section id="kalenteri">
+            
 <!-- https://elfsight.com/blog/how-to-make-a-simple-html-calendar/ -->
                 <div class="calendar">
                     <div class="calendar-header">
@@ -120,38 +125,55 @@
                         <div>28</div><div>29</div><div>30</div>
                     </div>
                 </div>
-            </section>        </div>
-        <div class="card">
-            <img src="#"> Lorem ipsum dolor sitconsectetur.
+            </section>
         </div>
+
+        
+
         <div class="card">
-            <img src="#">Lorem ipsum dolor sitconsectetur.
+            <img src="#"><br>
+            <p>
+                Lorem ipsum dolor sitconsectetur.
+            </p>
         </div>
         </section>
-    </section>
+    </section> <!-- card-container end -->
 
     <section id="liity">
         <h2>Liity jäseneksi</h2>
-        
         <section class="card-container">
             <div class="card">
-                <input type="text" name="name" required>
-                <input type="email" id="email" required>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label title="name">Nimi</label><br>
+                <input type="text" name="name" size="25" required><br>
+                <label title="email">Sähköposti</label><br>
+                <input type="email" id="email" size="25" required><br>
+                <label title="message">Viesti</label><br>
+                <textarea id="message" name="message" cols="27" rows="4" required></textarea><br>
                 <button type="submit">Lähetä</button>
             </div>
             <div class="card">
-            
+                Liity maailman naurattavimpaan yhteisöön!
             </div>
             <div class="card">
-            
+                <img src="#">
+            </div>
+        </section>
+    </section>
+
+    <section id="matkailija">    
+        <h2>Matkailijalle</h2><br>
+        <section class="card-container">
+            <div class="card">
+                Kiva maisema matkailijalle
+            </div><br>
+            <div class="card">
+                Kaikkea kivaa :)
             </div>
         </section>
     </section>
 
     <section id="svensk">
         <h2>Svensk</h2>
-        
         <section class="card-container">
             <div class="card">
                 Svenska jag

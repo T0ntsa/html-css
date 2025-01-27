@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vitsiälän kyläyhdistys</title>
     <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,8 @@
         <h1>Vitsiälän kyläyhdistys</h1>
         <section id="header">
             <header>
+                <input type="checkbox" id="mobile-menu-checkbox" class="mobile-menu-checkbox">
+                    <label for="mobile-menu-checkbox" class="mobile-menu-button">☰</label>
                 <ul id="nav">
                     <li><a href="#yhdistys">Yhdistys</a></li>
                     <li><a href="#palvelut">Palvelut</a></li>
@@ -25,16 +27,25 @@
                     <li><a href="#matkailija">Matkailijat</a></li>
                     <li><a href="#svensk">Svensk</a></li>
                 </ul>
-            </header>
-        </section>
+                <ul id="mobile-nav">
+                    <li><a href="#yhdistys">Yhdistys</a></li>
+                    <li><a href="#palvelut">Palvelut</a></li>
+                    <li><a href="#tapahtumat">Tapahtumat</a></li>
+                    <li><a href="#kalenteri">Vuokrattavat tilat</a></li>
+                    <li><a href="#liity">Liity jäseneksi</a></li>
+                    <li><a href="#matkailija">Matkailijat</a></li>
+                    <li><a href="#svensk">Svensk</a></li>
+                </ul>
+            </header>           
+        </section>    
+        
     </section>
 
     <section id="yhdistys">    
-        <h2>Vitsiälän kyläyhdistys</h2><br>
+        <h2>Vitsiälän kyläyhdistys<a href="#koti"><img src="imgs/koti.svg"></a></h2><br>
         <div class="content">
             <p>
-            Pieni kyläyhteisö maalaismasemissa. Yhdistys tarjoaa tietoa sekä toimintaa asukkaille, mökkiläisille ja matkailijoille.
-            </p><br>
+                Pieni kyläyhteisö maalaismaisemissa. Yhdistys tarjoaa tietoa ja toimintaa asukkaille ja mökkiläisille.             </p><br>
             <p>
                 Puheenjohtaja Pulla Pulu<br>
                 Sihteeri Maissi Hiiri<br>
@@ -44,7 +55,7 @@
     </section>
     
     <section id="palvelut">
-        <h2>Palvelut</h2>
+        <h2>Palvelut<a href="#koti"><img src="imgs/koti.svg"></a></h2>
         <section class="card-container">
             <div class="card">
                 <img src="imgs/tanssilava.jpg">
@@ -68,19 +79,17 @@
     </section>
 
     <section id="tapahtumat">
-        <h2>Tapahtumat</h2>
+        <h2>Tapahtumat<a href="#koti"><img src="imgs/koti.svg"></a></h2>
         <section class="card-container">
             <div class="card">
                 <img src="#">
                 <p>
-                    Lorem ipsum dolor sitconsectetur.
-                </p>
+                    Vitsiälän lava - tanssia ja laulua                 </p>
             </div>
             <div class="card">
                 <img src="#">
                 <p>
-                    Lorem ipsum dolor sitconsectetur.
-                </p>
+                    Herkkujen yö kesällä 2025                </p>
             </div>
             <div class="card">
                 <img src="#">
@@ -92,10 +101,9 @@
     </section>
 
     <section id="tilat">
-        <h2>Vuokrattavat tilat</h2><br>
+        <h2>Vuokrattavat tilat<a href="#koti"><img src="imgs/koti.svg"></a></h2><br>
         <section class="card-container">
-        <div class="card">
-            <section id="kalenteri">
+            <div class="card">
             
 <!-- https://elfsight.com/blog/how-to-make-a-simple-html-calendar/ -->
                 <div class="calendar">
@@ -123,7 +131,6 @@
                         <div>28</div><div>29</div><div>30</div>
                     </div>
                 </div>
-            </section>
         </div>
 
         
@@ -131,18 +138,19 @@
         <div class="card">
             <img src="#"><br>
             <p>
-                Lorem ipsum dolor sitconsectetur.
-            </p>
+                Vitsiälän lava            </p>
         </div>
         </section>
     </section> <!-- card-container end -->
 
     <section id="liity">
-        <h2>Liity jäseneksi</h2>
+        <h2>Liity jäseneksi<a href="#koti"><img src="imgs/koti.svg"></a></h2>
         <section class="card-container">
             <div class="card">
                 <label title="name">Nimi</label><br>
                 <input type="text" name="name" size="25" required><br>
+                <label title="phone">Puhelinnumero</label><br>
+                <input type="text" name="phone" size="25" required><br>
                 <label title="email">Sähköposti</label><br>
                 <input type="email" id="email" size="25" required><br>
                 <label title="message">Viesti</label><br>
@@ -150,8 +158,15 @@
                 <button type="submit">Lähetä</button>
             </div>
             <div class="card">
-                Liity maailman naurattavimpaan yhteisöön!
-            </div>
+                Liity jäseneksi asukas tai mökkiläinen! 
+
+                Liittyminen on ilmaista ja ei velvoita sinua osallistumaan. 
+                Täytä alla oleva lomake ja lähetä.
+                Ilmoittamaasi sähköpostiin saat tiedon tapahtumista ensimmäisten joukossa. 
+                ohje ja lomake 
+                
+                
+                            </div>
             <div class="card">
                 <img src="#">
             </div>
@@ -159,28 +174,51 @@
     </section>
 
     <section id="matkailija">    
-        <h2>Matkailijalle</h2><br>
+        <h2>Matkailijalle<a href="#koti"><img src="imgs/koti.svg"></a></h2><br>
+        <h3>Matkailija bongaa nämä:</h3><br>
+
         <section class="card-container">
             <div class="card">
-                Kiva maisema matkailijalle
-            </div><br>
+                <img src="imgs/kotkankärjen-luonnonsuojelualue.jpg" alt="Kotkokärjen luonnonsuojelualue">
+                
+                <h4>Kotkokärjen luonnonsuojelualue</h4>
+                <p>
+                Luonto on ottanut vallan vanhan soramontun alueesta. 
+                Ihastele Hauhonselän maisemia niemenkärjestä tai voi lähteä kiipeämään Kotkonharjua pitkin kohti Hauhon keskustaa. Matkan pituus noin 3 km. 
+                </p>
+            </div>
+
             <div class="card">
-                Kaikkea kivaa :)
+                <img src="imgs/kylänraitti.jpg" alt="Vitsiälän kylänraitti">
+                
+                <h4>Kylänraitti</h4>
+                <p>
+                Tutustu vanhaan kylämiljööseen kävellen. Matkan pituus noin 2 km. 
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="imgs/vuolteenkartanon-puutarha.jpg" >
+                
+                <h4>Vuolteen kartano</h4>
+                <p>
+                    Koe kartanon tunnelmaa ja viihdy kauniissa puutarhassa nauttien kahvista ja herkuista
+                </p>
             </div>
         </section>
     </section>
 
     <section id="svensk">
-        <h2>Svensk</h2>
+        <h2>Svensk<a href="#koti"><img src="imgs/koti.svg"></a></h2>
+ 
         <section class="card-container">
             <div class="card">
-                Svenska jag
+                Samma på svenska             </div>
+            <div class="card">
+                Samma på svenska 
             </div>
             <div class="card">
-            asdf
-            </div>
-            <div class="card">
-            asdf
+                Samma på svenska 
             </div>
         </section>
     </section>

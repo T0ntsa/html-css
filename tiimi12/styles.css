@@ -12,14 +12,15 @@ body {
     background-color: #edeae5;
 }
 
-/* div, section, span, ul, li, a, header {
+div, section, span, ul, li, a, header {
     box-sizing: border-box;
-} */
+}
 
 section {
     width: 96%;
     height: 100vh;
 }
+
 .league-script-regular {
     font-family: "League Script", serif;
     font-weight: 400;
@@ -85,6 +86,46 @@ section {
     text-decoration: underline;
 }
 
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #edeae5;
+    cursor: pointer;
+}
+
+#mobile-nav {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: #026670;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+#mobile-nav li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#mobile-nav li a {
+    color: #edeae5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#mobile-nav li a:hover {
+    text-decoration: underline;
+}
+
 #yhdistys {
     width: 100%;
     height: 100vh;
@@ -95,6 +136,12 @@ h2 {
     background-color: #026670;
     color: #edeae5;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2 img {
+    vertical-align: middle;
 }
 
 #yhdistys div {
@@ -138,11 +185,13 @@ h2 {
     margin: 15px;
 }
 
+
 /* Kalenteri alkaa */
 /* https://elfsight.com/blog/how-to-make-a-simple-html-calendar/ */
 /* Calendar container */
 .calendar {
-    width: 450px;
+    /* max-width: 450px; */
+    width: 350px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #edeae5;
@@ -154,7 +203,7 @@ h2 {
     text-align: center;
     background-color: #007bff;
     color: white;
-    padding: 5px;
+    padding: 2px;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -168,7 +217,7 @@ h2 {
 }
 
 .calendar-days div {
-    padding: 10px;
+    padding: 2px;
     text-align: center;
     font-weight: bold;
 }
@@ -180,7 +229,7 @@ h2 {
 }
 
 .calendar-dates div {
-    padding: 20px;
+    padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
 }
@@ -196,6 +245,8 @@ h2 {
     background-color: #fce181;
     width: 100%;
 }
+
+
 
 #liity {
     background-color: #fef9c7;
@@ -215,6 +266,10 @@ h2 {
     margin-left: 15px;
 }
 
+#matkailija .card-container img {
+    height: 250px;
+}
+
 #svensk {
     background-color: #fef9c7;
     width: 100%;
@@ -222,4 +277,38 @@ h2 {
 
 #svensk .card-container {
     margin-left: 15px;
+}
+
+@media (max-width: 600px) {
+    #nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-menu-checkbox:checked ~ #mobile-nav {
+        display: flex;
+    }
+
+    .card-container {
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        
+    }
+    .card {
+        padding: 0;
+        margin: 0;
+    }
+    .calendar-dates, .calendar-days, .calendar-header {
+        padding: 8px;
+        font-size: 14px;
+    }
+    #matkailija .card-container img {
+        height: 150px;
+    }
 }

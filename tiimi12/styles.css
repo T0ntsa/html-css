@@ -61,12 +61,13 @@ section {
     background-color: #026670;
     position: absolute;
     left: 10%;
+    align-content: center;
+    justify-content: center;
 }
 
 #nav li {
     display: inline-block;
     margin: 5px;
-
 }
 
 #nav li a {

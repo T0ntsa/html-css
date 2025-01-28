@@ -144,9 +144,13 @@ h2 img {
     vertical-align: middle;
 }
 
-#yhdistys div {
-    margin: 15px;
+#yhdistys div, p {
+    margin: 5px;
 }
+
+/* #yhdistys .card-container img {
+    height: 230px;
+} */
 
 #palvelut {
     width: 100%;
@@ -165,7 +169,7 @@ h2 img {
 }
 
 .card-container img {
-    height: 150px;
+    height: 230px;
 }
 
 .card {
@@ -246,8 +250,13 @@ h2 img {
     width: 100%;
 }
 
-
-
+#tilat .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#tilat .tilat-card img {
+    height: 400px;
+}
 #liity {
     background-color: #fef9c7;
     width: 100%;
@@ -255,8 +264,17 @@ h2 img {
 
 #liity .card-container {
     margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#liity .right-card img {
+    height: 400px;
+    align-content: center;
 }
 
+#liity p {
+    max-width: 80%;
+}
 #matkailija {
     background-color: #fce181;
     width: 100%;
@@ -267,7 +285,10 @@ h2 img {
 }
 
 #matkailija .card-container img {
-    height: 250px;
+    min-width: 330px;
+}
+#matkailija h3 {
+    margin: 20px;
 }
 
 #svensk {

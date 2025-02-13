@@ -1,0 +1,8 @@
+<FilesMatch "\.ini$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "\.js$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

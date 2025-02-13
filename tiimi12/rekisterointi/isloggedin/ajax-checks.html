@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("check_login.php")
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "loggedin") {
+                    // Luo div-elementti ja lisää sisältö
+                    let contentDiv = document.createElement("div");
+                    contentDiv.innerHTML = `
+                        Näet tämän koska olet kirjautunut!!<br>
+                        <h1>
+                            Tadaa<br>
+                            Status==loggedin, 
+                            <span id="username">${data.user}</span>!
+                        </h1>
+                    `;
+                    document.body.appendChild(contentDiv);
+                } else {
+                    window.location.href = "login.html";
+                }
+            })
+            .catch(error => console.error("Virhe kirjautumistarkistuksessa:", error));
+    });
+    </script>
+</body>
+</html>

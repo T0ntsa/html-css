@@ -173,7 +173,7 @@
     <section id="liity">
         <h2>Liity jäseneksi<a href="#koti"><img src="imgs/koti.svg" alt="Koti painike"></a></h2>
         <section class="card-container">
-            <div class="card">
+            <!-- <div class="card">
                 <p>
                 Liity jäseneksi asukas tai mökkiläinen!<br>
                 <br>
@@ -211,7 +211,55 @@
                 <br><br><br><br><br>
                 </p>
                 <img src="imgs/beautiful-shot-fence-leading-house-green-grass-area_181624-18255.jpg" alt="Pelto, aitaus ja maatalo kauniina aurinkoisenas kesäaamuna">
+            </div> -->
+            <div class="card">
+                
+                <p>
+                Liity jäseneksi asukas tai mökkiläinen!<br>
+                <br>
+                Liittyminen on ilmaista.
+                <br><br>
+                Täytä alla oleva lomake ja lähetä.
+                
+                Ilmoittamaasi sähköpostiin saat tiedon tapahtumista ensimmäisten joukossa. Jäsenyys on vapaaehtoista ja ei velvoita osallistumaan toimintaan.<br>
+                </p>
+                <div class="card">
+                    
+                    <!-- A button to open the popup form -->
+                    <button class="open-button" onclick="openForm()">Liity jäseneksi!</button>
+                </div>
+                <script>
+                    function openForm() {
+                        var leveys = 500;  // Popupin leveys
+                        var korkeus = 500; // Popupin korkeus
+
+                        // var vasen = (screen.width/2)-(w/2);
+                        // var yla = (screen.height/2)-(h/2);
+                        // var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+                        // return targetWin;
+                        // Lasketaan keskipiste käyttäjän näytön koon perusteella
+                        var vasen = (screen.width / 2) - (leveys/2);
+                        var yla = (screen.height / 2) - (korkeus/2);
+
+                         // Avataan popup-ikkuna keskelle näyttöä
+                        var asetukset = `width=${leveys},height=${korkeus},left=${vasen},top=${yla},resizable=no,scrollbars=no`;
+                         //var uusiIkkuna = window.open("liity.html", "Jäsenlomake", `width=${leveys},height=${korkeus},left=${vasen},top=${yla},resizable=no,scrollbars=no`);
+                        window.open("liity.html", "Jäsenlomake", asetukset);
+                        
+                    }
+                    
+                </script>
             </div>
+            <div class="card">
+                <p>
+                    Kyläyhdistys järjestää vuosikokouksen elokuussa 2025.<br><br>
+                    Kutsut jäsenille lähetetään heinäkuussa 2025.<br><br>
+                    Uudet jäsenet ovat myös tervetulleita!
+                <br><br><br><br><br>
+                </p>
+                <img src="imgs/beautiful-shot-fence-leading-house-green-grass-area_181624-18255.jpg" alt="Pelto, aitaus ja maatalo kauniina aurinkoisenas kesäaamuna">
+            </div>
+
         </section>
     </section>
 

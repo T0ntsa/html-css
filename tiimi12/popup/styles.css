@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #edeae5;
+    overflow-x: hidden;
+
+}
+
+/* div, section, span, ul, li, a, header {
+    box-sizing: border-box;
+} */
+
+section {
+    width: 96%;
+    /* padding: 20px; */
+    /* padding-top: 10px; */
+    background-color: #fef9c7;
+}
+
+/* header {
+    padding: 50px;
+} */
+
+.league-script-regular {
+    font-family: "League Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* css reset */
+
+#koti h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
+    transform: translate(-50%, -50%);
+    color: #edeae5;
+    font-size: 36px;
+}
+
+#koti {
+    width: 100%;
+    height: 100vh;
+    background-color: #edeae5;
+    background-image: url(imgs/maalaismaisema.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#koti img {
+    width: 100%;
+    background-size: cover;
+}
+
+#koti header {
+    width: 75%;
+    display: flex;
+    bottom: 0;
+    padding: 12px;
+    margin: 12px;
+    background-color: #026670;
+    position: absolute;
+    left: 10%;
+    align-content: center;
+    justify-content: center;
+}
+
+/* #nav {
+    display: none;  <!-- Hidden by default for mobile -->
+    list-style: none;
+    padding: 0;
+}  */
+    /* Tämä rikkoo selain näkymän navin */
+
+
+#nav li {
+    display: inline-block;
+    margin: 5px;
+}
+
+#nav li a {
+    color: #edeae5;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+#nav li a:href {
+    margin-top: 60px;
+}
+
+#nav li a:hover{
+    text-decoration: underline;
+}
+
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #edeae5;
+    cursor: pointer;
+}
+
+#mobile-nav {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: #026670;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+#mobile-nav li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#mobile-nav li a {
+    color: #edeae5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#mobile-nav li a:hover {
+    text-decoration: underline;
+}
+
+#yhdistys {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fef9c7;
+}
+
+h2 {
+    background-color: #026670;
+    color: #edeae5;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2 img {
+    vertical-align: middle;
+}
+
+#yhdistys div, p {
+    margin: 5px;
+}
+
+#yhdistys h3 {
+    margin: 15px;
+}
+
+#palvelut {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fce181;
+}
+#palvelut .card-container {
+    background-color: #fce181;
+
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-container img {
+    /* width: 260px; */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card {
+    /* margin: 5px; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 20px);
+}
+#palvelut div {
+    margin: 15px;
+}
+
+#tapahtumat {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fef9c7;
+}
+
+#tapahtumat div {
+    margin: 15px;
+}
+
+
+/* Kalenteri alkaa */
+/* https://elfsight.com/blog/how-to-make-a-simple-html-calendar/ */
+/* Calendar container */
+.calendar {
+    /* max-width: 450px; */
+    width: 350px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #edeae5;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+/* Calendar header styling */
+.calendar-header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 2px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Days of the week styling */
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #007bff;
+    color: white;
+}
+
+.calendar-days div {
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Date cells styling */
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-dates div {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Highlight today */
+.today {
+    background-color: #ffdd57;
+    font-weight: bold;
+}
+/* Kalenteri päättyy */
+
+#tilat {
+    background-color: #fce181;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#tilat .card-container {
+    background-color: #fce181;
+}
+
+/* #tilat .card-container img {
+    height: 150px;
+    width: 150px;
+} */
+
+#liity {
+    background-color: #fef9c7;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#liity .card-container {
+    margin: 15px;
+}
+
+#liity p {
+    max-width: 80%;
+    text-align: left;
+}
+#liity label, input, textarea, button, text {
+    float: left;
+    max-width: 200px;
+    resize: none;
+
+}
+#matkailija {
+    background-color: #fce181;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+#matkailija .card-container {
+    margin-left: 15px;
+    background-color: #fce181;
+
+}
+
+#matkailija h3 {
+    margin: 20px;
+}
+
+#svensk {
+    background-color: #fef9c7;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#svensk h3 {
+    margin: 20px;
+}
+
+#svensk .card-container {
+    margin: 15px;
+}
+
+#svensk .card-container img {
+    width: 65%;
+}
+
+@media (max-width: 600px) {
+    
+    #nav {
+        display: none;
+    }
+    #mobile-nav {
+        display: none;
+    }
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-menu-checkbox:checked ~ #mobile-nav {
+        display: flex;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        /* padding: 0;
+        margin: 0; */
+        max-width: 90%;
+    }
+
+    .calendar {
+        width: 90%; /* Pienennetään leveys mobiilissa */
+        font-size: 14px; /* Pienempi fontti */
+        margin: 10px auto; /* Keskitetään */
+    }
+
+    .calendar-header {
+        font-size: 1em; /* Pienempi otsikkoteksti */
+        padding: 5px; /* Vähemmän tilaa */
+    }
+
+    .calendar-days, .calendar-dates {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .calendar-days div, .calendar-dates div {
+        padding: 6px; /* Pienempi padding */
+        font-size: 12px; /* Pienempi fontti */
+    }
+    /* .calendar-dates, .calendar-days, .calendar-header {
+        padding: 2px;
+        font-size: 12px;
+        max-width: 90%;
+    } */
+
+    /* #matkailija .card-container img {
+        height: 150px;
+    } */
+
+    @media (min-width: 769px) {
+        #mobile-menu-checkbox,
+        .mobile-menu-button {
+            display: none;
+        }
+
+        #nav {
+            display: flex;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #tilat .card-container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .tilat-card, .calendar-card {
+            width: 90%; /* Adjust width for smaller screens */
+            margin: 1px 0; /* Add some spacing between items */
+        }
+
+        .tilat-card img {
+            width: 100%; /* Ensure the image adjusts to the container width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        #liity .card-container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+
+    }
+ 
+
+
+
+}

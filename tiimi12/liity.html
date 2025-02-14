@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Liity jäseneksi</title>
+<!-- <link rel="stylesheet" href="tyyli.css"> -->
+<style>
+  body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    width: 500;
+    height: 1000;
+    overflow: hidden; /* Poistaa vierityspalkit */
+    display: flex;
+    flex-direction: column; /* Asettaa elementit allekkain */
+    align-items: flex-start; /* Tasaus vasemmalle */
+    justify-content: center; /* Keskittää pystysuunnassa */
+    background-color: #fef9c7;
+}
+</style>
+</head>
+<body>
+<script>
+// function lahetaKayttaja(lomake){
+// 	var user=new Object();
+// 	user.tunnus=lomake.tunnus.value;
+// 	user.salasana=lomake.salasana.value;
+// 	var jsonUser=JSON.stringify(user);
+	
+// 	xmlhttp = new XMLHttpRequest();
+// 	xmlhttp.onreadystatechange = function() {
+// 	  if (this.readyState == 4 && this.status == 200) {
+// 		    document.getElementById("result").innerHTML = this.responseText;
+// 	  }
+// 	};
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+	xmlhttp.open("POST", "liity.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+
+</script>
+
+<!-- <h2>Liity jäseneksi!</h2> -->
+<!-- <p> Liity jäseneksi asukas tai mökkiläinen!<br>Liittyminen on ilmaista.<br><br>Sähköpostisi toimii käyttäjätunnuksena</p>
+<form id='userlomake'>
+    Etunimi: <input type='text' name='etunimi' value='' placeholder='Etunimi...' required><br>
+    Sukunimi: <input type='text' name='sukunimi' value='' placeholder='Sukunimmi...' required><br>
+    Puhelinnumero: <input type='number' name='puhnro' value='' placeholder='Puhellinnumero...' required><br>
+    Sähköposti: <input type='text' name='tunnus' value='' placeholder='Sähköpostiosoite...' required><br>
+    Salasana: <input type='password' name='salasana' value='' placeholder='Luo salasana...' required><br>
+    <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'><br>
+    </form>
+<p id='result'>
+Palaute tähän
+</p> -->
+<!-- <div class="form-popup" id="myForm">
+    <form action=".php/liity.php" class="form-container">
+      <h2>Liity jäseneksi!</h2>
+      <p> Liity jäseneksi asukas tai mökkiläinen!<br>Liittyminen on ilmaista.<br><br>Sähköpostisi toimii käyttäjätunnuksena</p>
+      <form id='userlomake'>
+          Etunimi: <input type='text' name='etunimi' value='' placeholder='Etunimi...' required><br>
+          Sukunimi: <input type='text' name='sukunimi' value='' placeholder='Sukunimmi...' required><br>
+          Puhelinnumero: <input type='number' name='puhnro' value='' placeholder='Puhellinnumero...' required><br>
+          Sähköposti: <input type='text' name='tunnus' value='' placeholder='Sähköpostiosoite...' required><br>
+          Salasana: <input type='password' name='salasana' value='' placeholder='Luo salasana...' required><br>
+          <input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'><br>
+          </form>
+      <p id='result'>
+      Palaute tähän
+      </p>
+    </form>
+  </div> -->
+
+  <h2>Liity jäseneksi</h2>
+  <p>Liittyminen on ilmaista.<br>Saat ensimmäisten joukossa tietoa tulevista tapahtumista. <br>Täytä alla oleva lomake ja lähetä.<br>Sähköposti toimii käyttäjätunnuksena.</p>
+
+  <form action="./liity.php" method="post">
+      <label>Etunimi:</label><br>
+      <input type="text" name="etunimi" required><br>
+
+      <label>Sukunimi:</label><br>
+      <input type="text" name="sukunimi" required><br>
+
+      <label>Puhelinnumero:</label><br>
+      <input type="text" name="puhelin" required><br>
+
+      <label>Sähköposti:</label><br>
+      <input type="email" name="email" required><br>
+
+      <label>Salasana:</label><br>
+      <input type="password" name="salasana" required><br>
+
+      <button type="submit">Lähetä</button>
+  </form>
+
+</body>
+</html>
+

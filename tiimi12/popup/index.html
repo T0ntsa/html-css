@@ -12,6 +12,41 @@
 <body>
     <section id="container">
 
+<script>
+    function openLogin() {
+        var leveys = 500;  // Popupin leveys
+        var korkeus = 500; // Popupin korkeus
+        // Lasketaan keskipiste käyttäjän näytön koon perusteella
+        var vasen = (screen.width / 2) - (leveys/2);
+        var yla = (screen.height / 2) - (korkeus/2);
+        // Avataan popup-ikkuna keskelle näyttöä
+        var asetukset = `width=${leveys},height=${korkeus},left=${vasen},top=${yla},resizable=no,scrollbars=no`;
+        //var uusiIkkuna = window.open("liity.html", "Jäsenlomake", `width=${leveys},height=${korkeus},left=${vasen},top=${yla},resizable=no,scrollbars=no`);
+        window.open("./login.html", "Jäsenlomake", asetukset); 
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("./check_login.php")
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "loggedin") {
+                    // koodia tähän
+                    document.getElementById("kirjaudu").style.display = "none";
+                    document.getElementById("liity1").style.display = "flex";
+                    document.getElementById("liitydiv").style.display = "none";
+
+                } else {
+                    document.getElementById("ulos").style.display = "none";
+                    document.getElementById("liity1").style.display = "none";
+
+                }
+            })
+            .catch(error => console.error("Virhe kirjautumistarkistuksessa:", error));
+    });
+</script>
+
     <section id="koti">
         <h1>Vitsiälän kyläyhdistys</h1>
         <section id="header">
@@ -26,6 +61,10 @@
                     <li><a href="#liity">Liity jäseneksi</a></li>
                     <li><a href="#matkailija">Matkailijat</a></li>
                     <li><a href="#svensk">Svensk</a></li>
+                    <li><a id="kirjaudu" class="open-button" onclick="openLogin()">Kirjaudu</a></li>
+                    <!-- <li><a id="ulos" class="open-button" onclick="openLogout()">Kirjaudu ulos</a></li> -->
+                    <li><a href="./logout.php" id="ulos">Kirjaudu ulos</a></li>
+
                 </ul>
                 <ul id="mobile-nav">
                     <li><a href="#yhdistys">Yhdistys</a></li>
@@ -173,6 +212,7 @@
     <section id="liity">
         <h2>Liity jäseneksi<a href="#koti"><img src="imgs/koti.svg" alt="Koti painike"></a></h2>
         <section class="card-container">
+            <div id="liitydiv">
             <div class="card">
                 
                 <p>
@@ -192,19 +232,30 @@
                 <script>
                     function openForm() {
                         var leveys = 500;  // Popupin leveys
-                        var korkeus = 1000; // Popupin korkeus
+                        var korkeus = 500; // Popupin korkeus
 
+                        // var vasen = (screen.width/2)-(w/2);
+                        // var yla = (screen.height/2)-(h/2);
+                        // var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+                        // return targetWin;
                         // Lasketaan keskipiste käyttäjän näytön koon perusteella
-                        var vasen = (window.screen.width - leveys) / 2;
-                        var yla = (window.screen.height - korkeus) / 2;
+                        var vasen = (screen.width / 2) - (leveys/2);
+                        var yla = (screen.height / 2) - (korkeus/2);
 
                          // Avataan popup-ikkuna keskelle näyttöä
                         var asetukset = `width=${leveys},height=${korkeus},left=${vasen},top=${yla},resizable=no,scrollbars=no`;
                          //var uusiIkkuna = window.open("liity.html", "Jäsenlomake", `width=${leveys},height=${korkeus},left=${vasen},top=${yla},resizable=no,scrollbars=no`);
                         window.open("liity.html", "Jäsenlomake", asetukset);
+                        
                     }
+                    
                 </script>
+                </div> <!-- end of liitydiv -->
             </div>
+            <div id="liity1">
+                PERKELE
+            </div>
+
             <div class="card">
                 <p>
                     Kyläyhdistys järjestää vuosikokouksen elokuussa 2025.<br><br>
@@ -214,6 +265,7 @@
                 </p>
                 <img src="imgs/beautiful-shot-fence-leading-house-green-grass-area_181624-18255.jpg" alt="Pelto, aitaus ja maatalo kauniina aurinkoisenas kesäaamuna">
             </div>
+
         </section>
     </section>
 

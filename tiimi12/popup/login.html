@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kirjaudu</title>
+<style>
+	body {
+		font-size: 100%;
+		font-family: Arial, Helvetica, sans-serif;
+		display: flex;
+		margin: 5px;
+		padding: 5px;
+		width: 500;
+		height: 1000;
+		overflow: hidden; /* Poistaa vierityspalkit */
+		display: flex;
+		flex-direction: column; /* Asettaa elementit allekkain */
+		align-items: flex-start; /* Tasaus vasemmalle */
+		justify-content: center; /* Keskittää pystysuunnassa */
+		background-color: #fce181;
+	}
+</style>
+</head>
+<body>
+<script>
+function lahetaKayttaja(lomake){
+	var user=new Object();
+	user.tunnus=lomake.tunnus.value;
+	user.salasana=lomake.salasana.value;
+	var jsonUser=JSON.stringify(user);
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        if (this.responseText=="ok"){
+            // window.location.assign("../login.php");
+			// alert('Rekisteröityminen onnistui!'); 
+			window.close();
+			
+        }
+        else{
+			document.getElementById("result").innerHTML = "Virhe kirjautumisessa";
+			// document.getElementById("result").innerHTML = this.responseText; 
+        }
+    }
+	};
+	xmlhttp.open("POST", "./login.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+}
+</script>
+
+<h2>Kirjaudu</h2>
+<form id='userlomake'>
+Sähköposti: <input type='text' name='tunnus' value='' placeholder='Käyttäjätunnus...'><br>
+Salasana: <input type='text' name='salasana' value='' placeholder='Salasana...'><br>
+<input type='button' name='ok' value='Lähetä' onclick='lahetaKayttaja(this.form);'><br>
+</form>
+<p id='result'></p>
+
+</body>
+</html>

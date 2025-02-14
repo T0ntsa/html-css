@@ -36,7 +36,8 @@ function lahetaKayttaja(lomake){
             // window.location.assign("../login.php");
 			// alert('Rekisteröityminen onnistui!'); 
 			window.close();
-			
+			window.opener.location.reload();
+
         }
         else{
 			document.getElementById("result").innerHTML = "Virhe kirjautumisessa";
